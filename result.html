@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title id="page-title">
+        Tavs rezultāts
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="app">
+
+        <section class="screen landing-screen">
+
+            <div class="landing-content">
+
+                <div class="pastry-placeholder">
+                    🥐
+                </div>
+
+                <p class="eyebrow" id="result-eyebrow">
+                    ATBILDES - TU ESI KĀ...
+                </p>
+
+                <h1 id="result-title">
+                    Vecrīga
+                </h1>
+
+                <p
+                    class="landing-description"
+                    id="result-description">
+                </p>
+
+
+                <button
+                    class="primary-button"
+                    id="restart-button"
+                    onclick="restartQuiz()">
+
+                    Izpildīt testu vēlreiz
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        /*
+         * Get language
+         */
+
+        const language =
+            localStorage.getItem("quizLanguage") || "lv";
+
+
+        /*
+         * Get result
+         */
+
+        const result =
+            localStorage.getItem("quizResult");
+
+
+        /*
+         * Result content
+         */
+
+        const results = {
+
+            vecriga: {
+
+                lv: {
+                    name: "Vecrīga",
+
+                    description:
+                        "Personība ar vieglu un draudzīgu raksturu, kam Rīgā daudz draugu un būs vēl vairāk. Cilvēks - svētki / rada svētku sajūtu ar savu klātbūtni. Ar izsmalcinātu gaumi, bet bez grama snobisma."
+                },
+
+                en: {
+                    name: "Cream Puff / Vecrīga",
+
+                    description:
+                        "A personality with a lighthearted and friendly nature who has many friends in Riga and will have even more. The life of the party—creating a festive mood just by being there. Refined taste, but without a single grain of snobbery."
+                }
+
+            },
+
+
+            piradzins: {
+
+                lv: {
+                    name: "Pīrādziņš",
+
+                    description:
+                        "Pamatīgs, uzticams, nosvērts raksturs. Jauniem darbiem “jānobriest”. Spēj rast domubiedrus gan gaļēdāju, gan veģetāriešu kompānijās."
+                },
+
+                en: {
+                    name: "Pīrādziņš / Bacon Bun",
+
+                    description:
+                        'A solid, reliable, and grounded character. Ideas need to "rise" before taking action. Able to find like-minded people in both meat-eater and vegetarian groups.'
+                }
+
+            },
+
+
+            austina: {
+
+                lv: {
+                    name: "Austiņa",
+
+                    description:
+                        "Rotaļīgs, daudžķautņains raksturs. Rada sajūtu, ka vienlaikus spēj atrasties vairākās vietās. Dažiem atgādina sirdi (sirsnīga daba), citiem ausi (ieklausās citos)."
+                },
+
+                en: {
+                    name: "Palmier / Austiņa",
+
+                    description:
+                        "A playful, multifaceted character. Gives off the feeling of being in multiple places at once. Reminds some of a heart (warm-hearted nature) and others of an ear (a good listener)."
+                }
+
+            },
+
+
+            biezpienmaize: {
+
+                lv: {
+                    name: "Biezpienmaize",
+
+                    description:
+                        "Cilvēks, kas vienmēr māk “uzlikt punktiņu uz i” - gan svētkos, gan darba dienās. Mierinoša un komfortu radoša būtība - šī cilvēka klātbūtne vienmēr ir laba un veselīga izvēle."
+                },
+
+                en: {
+                    name: "Curd Cake / Biezpienmaize",
+
+                    description:
+                        'Someone who always knows how to "dot the i\'s"—both on holidays and workdays. A comforting and cozy nature—this person\'s presence is always a good and wholesome choice.'
+                }
+
+            }
+
+        };
+
+
+        /*
+         * Text around the result
+         */
+
+        const interfaceText = {
+
+            lv: {
+                eyebrow: "ATBILDES - TU ESI KĀ...",
+                restart: "Izpildīt testu vēlreiz",
+                pageTitle: "Tavs rezultāts"
+            },
+
+            en: {
+                eyebrow: "RESULTS — YOU ARE LIKE A...",
+                restart: "Take the test again",
+                pageTitle: "Your result"
+            }
+
+        };
+
+
+        /*
+         * Get the correct result content
+         */
+
+        const resultData =
+            results[result][language];
+
+
+        /*
+         * Update page
+         */
+
+        document.documentElement.lang =
+            language;
+
+
+        document.getElementById(
+            "page-title"
+        ).textContent =
+            interfaceText[language].pageTitle;
+
+
+        document.getElementById(
+            "result-eyebrow"
+        ).textContent =
+            interfaceText[language].eyebrow;
+
+
+        document.getElementById(
+            "result-title"
+        ).textContent =
+            resultData.name;
+
+
+        document.getElementById(
+            "result-description"
+        ).textContent =
+            resultData.description;
+
+
+        document.getElementById(
+            "restart-button"
+        ).textContent =
+            interfaceText[language].restart;
+
+
+        /*
+         * Restart quiz
+         */
+
+        function restartQuiz() {
+
+            localStorage.removeItem(
+                "quizAnswers"
+            );
+
+            localStorage.removeItem(
+                "quizScores"
+            );
+
+            localStorage.removeItem(
+                "quizResult"
+            );
+
+            window.location.href =
+                "index.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

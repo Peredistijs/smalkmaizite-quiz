@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kāda smalkmaizīte tu esi?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- LANDING PAGE -->
+        <section id="landing-screen" class="screen landing-screen">
+
+            <div class="landing-content">
+
+                <div class="pastry-placeholder">
+                    🥐
+                </div>
+
+                <h1 id="landing-title">
+                    Kāda smalkmaizīte<br>
+                    tu esi?
+                </h1>
+
+                <p class="landing-description" id="landing-description">
+                    Atbildi uz 12 jautājumiem un uzzini,
+                    kura smalkmaizīte vislabāk raksturo tevi.
+                </p>
+
+                <div class="language-switcher">
+
+                <button id="lv-button" class="language-button active">
+                    LV
+                </button>
+
+                <span>/</span>
+
+                <button id="en-button" class="language-button">
+                    EN
+                </button>
+
+                </div>
+
+                <button id="start-button" class="primary-button">
+                    Sākt testu
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ PAGE -->
+        <section id="quiz-screen" class="screen quiz-screen hidden">
+
+            <div class="quiz-container">
+
+                <div class="quiz-header">
+
+                    <span id="question-counter">
+                        1 / 12
+                    </span>
+
+                    <div class="progress-track">
+                        <div
+                            id="progress-bar"
+                            class="progress-bar">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="question-container" class="question-container">
+
+                    <p class="question-number">
+                        JAUTĀJUMS 1
+                    </p>
+
+                    <h2 id="question-text">
+                        Jautājums tiks ielādēts šeit
+                    </h2>
+
+                    <div id="answers-container" class="answers-container">
+                        <!-- Answers will be added by JavaScript -->
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="next-button"
+                    class="primary-button next-button"
+                    disabled>
+                    Turpināt
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

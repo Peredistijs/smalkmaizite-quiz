@@ -1,0 +1,396 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f2eb;
+    color: #2d241f;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing-screen {
+    text-align: center;
+}
+
+.landing-content {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Temporary pastry */
+
+.pastry-placeholder {
+    font-size: 90px;
+    margin-bottom: 30px;
+
+    animation: floatingPastry 3s ease-in-out infinite;
+}
+
+@keyframes floatingPastry {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Small title */
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+
+    opacity: 0.6;
+}
+
+
+/* Main title */
+
+h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+
+    margin-bottom: 28px;
+}
+
+
+/* Description */
+
+.landing-description {
+    max-width: 500px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    opacity: 0.7;
+
+    margin-bottom: 40px;
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.language-button {
+    border: none;
+    background: transparent;
+
+    padding: 4px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #2d241f;
+
+    opacity: 0.35;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+.language-button:hover {
+    opacity: 0.7;
+}
+
+.language-button.active {
+    opacity: 1;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.primary-button {
+    border: none;
+
+    padding: 17px 34px;
+
+    border-radius: 100px;
+
+    background: #2d241f;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.primary-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.primary-button:disabled:hover {
+    transform: none;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-container {
+    width: 100%;
+    max-width: 720px;
+}
+
+
+/* Quiz header */
+
+.quiz-header {
+    margin-bottom: 70px;
+}
+
+#question-counter {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    opacity: 0.6;
+}
+
+
+/* Progress bar */
+
+.progress-track {
+    width: 100%;
+    height: 5px;
+
+    background: rgba(45, 36, 31, 0.12);
+
+    border-radius: 100px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 8.333%;
+
+    background: #2d241f;
+
+    border-radius: 100px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-container {
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.question-number {
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    opacity: 0.45;
+
+    margin-bottom: 15px;
+}
+
+#question-text {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-button {
+    width: 100%;
+
+    padding: 20px 22px;
+
+    border: 2px solid rgba(45, 36, 31, 0.15);
+
+    border-radius: 14px;
+
+    background: transparent;
+
+    color: #2d241f;
+
+    text-align: left;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.answer-button:hover {
+    border-color: #2d241f;
+    transform: translateX(4px);
+}
+
+.answer-button.selected {
+    background: #2d241f;
+    border-color: #2d241f;
+    color: white;
+}
+
+
+/* Next button */
+
+.next-button {
+    margin-top: 35px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 30px 18px;
+    }
+
+    .pastry-placeholder {
+        font-size: 70px;
+    }
+
+    h1 {
+        letter-spacing: -1px;
+    }
+
+    .landing-description {
+        font-size: 16px;
+    }
+
+    .quiz-header {
+        margin-bottom: 50px;
+    }
+
+    #question-text {
+        margin-bottom: 30px;
+    }
+
+    .answer-button {
+        padding: 17px;
+        font-size: 16px;
+    }
+
+}

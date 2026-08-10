@@ -136,6 +136,43 @@ h1 {
 
     margin-bottom: 40px;
 }
+/*BAKERY LINK RESULT PAGE */
+
+.bakery-link-text {
+    
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #2d241f;
+    opacity: 0.7;
+}
+
+.bakery-link {
+    color: #2d241f;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    opacity: 0.7;
+
+    text-decoration: underline;
+
+    transition: opacity 0.2s ease;
+}
+
+.bakery-link:hover {
+    opacity: 1;
+}
+
+.bakery-link-section {
+    width: 70%;
+    margin-top: 1px;
+    padding-top: 30px;
+
+    border-top: 2px solid rgba(45, 36, 31, 0.15);
+}
 
 /* =========================
    LANGUAGE SWITCHER

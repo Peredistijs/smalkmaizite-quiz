@@ -13,7 +13,7 @@ const questions = [
         en: {
             question: "Your ideal day off in Riga:",
             answers: [
-                "Traditional fair at the Open-Air Ethnographical Museum of Latvia",
+                "Traditional fair at the Ethnographic Open-Air Museum of Latvia",
                 "A stroll through the Art Nouveau district",
                 "Picnic in one of Riga's parks",
                 "Boat ride along the city canal"
@@ -41,10 +41,10 @@ const questions = [
         en: {
             question: "Cultural event in Riga:",
             answers: [
-                "Attending an opera performance at LNOB (Latvian National Opera and Ballet)",
+                "Attending an opera performance at The Latvian National Opera and Ballet",
                 "Jazz concert by the Small Guild",
                 "Folk music concerts during Midsummer in Riga",
-                "Thursday evening concerts in the Kalnciems Quarter"
+                "Thursday evening concerts in the Kalnciema Quarter"
             ]
         },
 
@@ -60,7 +60,7 @@ const questions = [
         lv: {
             question: "Izvēlies ēku:",
             answers: [
-                "LNMM galvenā ēka",
+                "Latvijas Nacionālā mākslas muzeja galvenā ēka",
                 "3 brāļi Vecrīgā",
                 "Jūgendstila ēka Elizabetes ielā 10b",
                 "Latvijas Nacionālā bibliotēka"
@@ -69,8 +69,8 @@ const questions = [
         en: {
             question: "Pick a building:",
             answers: [
-                "LNMM main building",
-                "Three Brothers in Old Town",
+                "Latvian National Museum of Art",
+                "The Three Brothers in Riga Old Town",
                 "Art Nouveau building at 10b Elizabetes Street",
                 "National Library of Latvia"
             ]
@@ -95,10 +95,10 @@ const questions = [
             ]
         },
         en: {
-            question: "Park in Riga:",
+            question: "Most beautiful park in Riga:",
             answers: [
                 "Vērmanes Garden",
-                "Botanical Garden",
+                "The Botanical Garden of the University of Latvia",
                 "Opera Square",
                 "Victory Park"
             ]
@@ -125,7 +125,7 @@ const questions = [
             ]
         },
         en: {
-            question: "Sporty activity in Riga:",
+            question: "Active and sports-related experiences in Riga:",
             answers: [
                 "Running the Rimi Riga Marathon",
                 "Sunset canoeing on the City Canal",
@@ -144,7 +144,7 @@ const questions = [
 //question 6
     {
         lv: {
-            question: "Labākais gada laiks Rīgā:",
+            question: "Labākais gadalaiks Rīgā:",
             answers: [
                 "Pavasaris",
                 "Vasara",
@@ -201,8 +201,8 @@ const questions = [
         lv: {
             question: "Muzejs Rīgā:",
             answers: [
-                "Rīgas birža",
-                "Motormuzejs",
+                "Mākslas muzejs Rīgas Birža",
+                "Rīgas Motormuzejs",
                 "Latvijas Nacionālais vēstures muzejs",
                 "Modes muzejs"
             ]
@@ -238,7 +238,7 @@ const questions = [
         en: {
             question: "Where to party in Riga:",
             answers: [
-                "Old Town (Vecrīga)",
+                "The Old Town of Riga",
                 "Briāna Quarter",
                 "Kimmel Quarter",
                 "Quiet Centre"
@@ -294,7 +294,7 @@ const questions = [
         en: {
             question: "Riga neighbourhood:",
             answers: [
-                "Old Town (Vecrīga)",
+                "The Old Town of Riga",
                 "Quiet Centre",
                 "Āgenskalns",
                 "Mežaparks"
@@ -320,7 +320,7 @@ const questions = [
             ]
         },
         en: {
-            question: "Way of getting around Riga:",
+            question: "The best way of getting around Riga:",
             answers: [
                 "Tram",
                 "Bicycle",

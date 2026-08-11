@@ -459,7 +459,7 @@ ANSWER TEXT
     }
 
     .answer-button {
-        padding: 17px;
+        padding: 0;
         font-size: 16px;
     }
 

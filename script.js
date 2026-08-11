@@ -75,10 +75,33 @@ let userAnswers = [];
 
 
 /* =========================
+PRELOAD IMAGES
+========================= */
+
+function preloadImages() {
+
+    questions.forEach(question => {
+
+        question.images.forEach(imagePath => {
+
+            const image = new Image();
+
+            image.src = imagePath;
+
+        });
+
+    });
+
+}
+
+
+/* =========================
    START QUIZ
 ========================= */
 
 startButton.addEventListener("click", () => {
+
+    preloadImages();
 
     landingScreen.style.opacity = "0";
     landingScreen.style.transform = "translateX(-30px)";

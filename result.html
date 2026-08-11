@@ -28,8 +28,8 @@
 
             <div class="landing-content">
 
-                <div class="pastry-placeholder">
-                    🥐
+                <div class="pastry-placeholder result-image-container">
+                    <img id="result-image" src="" alt="">
                 </div>
 
                 <p class="eyebrow" id="result-eyebrow">
@@ -82,6 +82,15 @@
 
         const result =
             localStorage.getItem("quizResult");
+
+
+    
+        const resultImages = {
+            vecriga: "images/vecriga.png",
+            piradzins: "images/piradzins.png",
+            austina: "images/austina.png",
+            biezpienmaize: "images/biezpienmaize.png"
+        };
 
 
         /*
@@ -198,6 +207,14 @@
         const resultData =
             results[result][language];
 
+        const resultImage =
+            document.getElementById("result-image");
+
+        resultImage.src =
+            resultImages[result];
+
+        resultImage.alt =
+            resultData.name;
 
         /*
          * Update page

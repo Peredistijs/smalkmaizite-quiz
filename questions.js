@@ -20,6 +20,13 @@ const questions = [
             ]
         },
 
+        images: [
+            "images/q1-option1.webp",
+            "images/q1-option2.jpg",
+            "images/q1-option3.jpg",
+            "images/q1-option4.jpg"
+        ],
+
         results: [
             "piradzins",
             "vecriga",

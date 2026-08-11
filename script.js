@@ -9,7 +9,7 @@ let currentLanguage =
 const translations = {
 
     lv: {
-        title: "Kāda smalkmaizīte<br>tu esi?",
+        title: "Kāda smalkmaizīte<br>esi Tu?",
 
         start: "Sākt testu",
 
@@ -22,7 +22,7 @@ const translations = {
     },
 
     en: {
-        title: "Which pastry<br>are you?",
+        title: "Which Pastry<br>Are You?",
 
         start: "Start the test",
 
@@ -164,9 +164,44 @@ function showQuestion() {
                 "answer-button"
             );
 
-            button.textContent =
+
+            /* Image */
+
+            const image =
+                document.createElement("img");
+
+            image.src =
+                question.images[index];
+
+            image.alt =
                 answer;
 
+            image.classList.add(
+                "answer-image"
+            );
+
+
+            /* Text */
+
+            const text =
+                document.createElement("span");
+
+            text.classList.add(
+                "answer-text"
+            );
+
+            text.textContent =
+                answer;
+
+
+            /* Put image + text inside button */
+
+            button.appendChild(image);
+
+            button.appendChild(text);
+
+
+            /* Answer click */
 
             button.addEventListener(
                 "click",
@@ -175,6 +210,7 @@ function showQuestion() {
                     selectAnswer(
                         index,
                         button
+
                     );
 
                 }

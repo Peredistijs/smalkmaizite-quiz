@@ -5,7 +5,7 @@ const questions = [
             question: "Tava ideālā atpūta Rīgā:",
             answers: [
                 "Gadatirgus Latvijas Etnogrāfiskājā brīvdabas muzejā",
-                "Pastaiga pa Jūgendstila rajonu",
+                "Pastaiga jūgendstila rajonā",
                 "Pikniks kādā no Rīgas parkiem",
                 "Izbrauciens ar laivu pa pilsētas kanālu"
             ]

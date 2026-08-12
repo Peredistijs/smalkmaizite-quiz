@@ -483,8 +483,9 @@ ANSWER TEXT
         padding: 30px 18px;
     }
 
-    .pastry-placeholder {
-        font-size: 70px;
+    .pastry-placeholder img {
+        width: 120px;
+        height: 120px;
     }
 
     h1 {
@@ -507,5 +508,4 @@ ANSWER TEXT
         padding: 0;
         font-size: 16px;
     }
-
 }
